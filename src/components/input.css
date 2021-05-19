@@ -1,0 +1,30 @@
+.input{
+    height: 45px;
+    width: 70%;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    font-size: larger;
+}
+.input:focus{
+    border: 3px solid rgb(30, 111, 92);
+    box-shadow: 5px 10px 10px 5px rgba(30, 111, 92, 0.4);
+}
+.inputHeader{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.btn{
+    margin-left: 5px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: large;
+    width: 20%;
+}
+.btn:hover{
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
+    background-color: #1e6f5c;
+    
+}

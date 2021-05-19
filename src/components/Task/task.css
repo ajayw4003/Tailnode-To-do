@@ -1,0 +1,46 @@
+.task{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.item-block{
+    width: 80%;
+    background-color:white;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.todo-item{
+    width: 80%;
+    height: 50%;
+    font-size: large;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    outline: none;
+    border: none;
+}
+
+.completed{
+    padding: 5px;
+    text-align: left;
+    font-size: larger;
+    font-weight: 600;
+}
+.empty{
+    font-size: larger;
+    font-weight: 600;
+    color: rgb(5, 128, 56);
+}
+.not-empty{
+    display: none;
+}
