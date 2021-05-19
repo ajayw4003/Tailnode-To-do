@@ -25,3 +25,14 @@
     text-align: center;
     padding-bottom: 10px;
 }
+@media screen and (max-width: 700px) {
+    .block{
+        height: 93vh;
+        width: 100%;
+    }
+    .block1{
+        height: 100%;
+        width: 100%;
+
+    }
+}

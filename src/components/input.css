@@ -8,8 +8,8 @@
     font-size: larger;
 }
 .input:focus{
-    border: 3px solid rgb(30, 111, 92);
-    box-shadow: 5px 10px 10px 5px rgba(30, 111, 92, 0.4);
+    border: 3px solid rgb(164, 224, 210);
+    box-shadow: 5px 5px 5px  rgba(166, 233, 217, 0.4);
 }
 .inputHeader{
     display: flex;
