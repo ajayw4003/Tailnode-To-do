@@ -1,32 +1,39 @@
 import React, {useEffect, useState } from 'react';
 import "./task.css";
 
-const Task = ({todos, settodos}) => {
+const Task = ({todos, settodos, isTrue, setisTrue}) => {
     const [uncompleted, setumcompleted] = useState(todos);
     const [completed, setcompleted] = useState([]);
-    const [isTrue, setisTrue] = useState([])
 
     useEffect(() => {
         let uncompletedTask = todos.filter((item) => item.isChecked === false);
             setumcompleted(uncompletedTask);
-            let completedTask =  isTrue.filter((item) => item.isChecked === true);
+            let completedTask =  todos.filter((item) => item.isChecked === true);
             setcompleted(completedTask);        
-    }, [todos, isTrue])
-
-    useEffect(() => {
-        if(todos.length === 0){
-            setisTrue([]);
-        }
     }, [todos])
+
+    // useEffect(() => {
+    //     if(todos.length === 0){
+    //         setisTrue([]);
+    //     }
+    // }, [todos])
 
     const isChecked = (id) => {
             let updatedToDoList = todos.map((item) => {
                 if(item.id === id){
                     item.isChecked = !item.isChecked;
                     if(item.isChecked === true){
-                        let newCompleted = [...completed];
-                        newCompleted.unshift(item);
-                        setisTrue(newCompleted);
+                        let newtodos = [...todos]
+                        let index = newtodos.findIndex(obj => obj.id === id);
+                        let trueItem = newtodos[index];
+                        newtodos.forEach(element => {
+                            if(element.id === id){
+                                newtodos.splice(index, 1);
+                            }
+                        });
+                        let newCompleted = [...newtodos];
+                        newCompleted.unshift(trueItem);
+                        settodos(newCompleted);
                     }
                 }
                 return(
@@ -35,6 +42,7 @@ const Task = ({todos, settodos}) => {
            });
            settodos(updatedToDoList);
     }
+
 
     return (
         <div className = "task">

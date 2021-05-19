@@ -3,7 +3,6 @@ import "./input.css";
 
 const Input = ({todos, settodos}) => {
     const [input, setinput] = useState("");
-    console.log(todos);
 
     const handleChange = (val) => {
         setinput(val);
